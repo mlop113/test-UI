@@ -7,7 +7,8 @@ import { HomeScreen } from './screens/Home'
 import { UpdatePassword } from './screens/UpdatePassword'
 import { ConfirmRegister } from './screens/ConfirmRegister'
 import { Profile } from './screens/Profile';
-import {Card} from './screens/Card'
+import { Card } from './screens/Card'
+import { Payment } from './screens/Payment'
 import { MyTabBar } from './screens/components/MyTabBar'
 
 
@@ -74,19 +75,13 @@ export default function App() {
           name="ConfirmRegister"
           component={ConfirmRegister} />
         <Stack.Screen
-          options={{
-            headerStyle: {
-              backgroundColor: 'red',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-              color: "red"
-            },
-          }}
           options={{ headerShown: false }}
           name="MyProfile"
           component={MyProfile} />
+        <Stack.Screen
+          name="Payment"
+          options={{ headerShown: false }}
+          component={Payment} />
       </Stack.Navigator>
     </NavigationContainer>
   );

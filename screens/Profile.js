@@ -66,11 +66,11 @@ export function Profile({ navigation }) {
             <View style={styles.container}>
                 <View style={styles.wrapInfo}>
                     <TouchableOpacity onPress={() => navigation.replace('Home')}>
-                        <Image source={images.menu} style={styles.image}
+                        <Image source={images.menu} style={styles.icon}
                         />
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Image source={images.time} style={styles.image}
+                        <Image source={images.time} style={styles.icon}
                         />
                     </TouchableOpacity>
                 </View>
@@ -98,7 +98,7 @@ export function Profile({ navigation }) {
                 </View>
                 <View style={{ height: metrics.screenHeight / 8 }}>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                        <TouchableOpacity style={styles.wrapButton}>
+                        <TouchableOpacity style={styles.wrapButton} onPress={()=> navigation.navigate('Payment')}>
                             <Image source={images.business} style={styles.image} />
                             <Text style={styles.textButton}>
                                 Thanh Toán
@@ -149,6 +149,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     wrapInfo: { flexDirection: 'row', justifyContent: 'space-between' },
+    icon: {height: 25, width: 25},
     image: { height: 40, width: 40, tintColor: 'blue' },
     wrapButton: { alignItems: 'center', justifyContent: 'center', marginRight: metrics.screenWidth / 15 },
     textButton: { color: 'black', flex: 1, marginTop: 10 },
